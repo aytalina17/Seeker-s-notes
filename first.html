@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style type="">
+		.first {
+			background-image: url(3.png);
+			background-size: 100% 100%; 
+			height: 750px;
+		}
+		.subj1 {
+			background-image: url(clock.png);
+			background-size: 100% 100%;
+			width: 40px;
+			height: 70px;
+			position: absolute;
+			left: 6%;
+			top: 71%;
+		}
+		.subj2 {
+			background-image: url(arbalet.png);
+			background-size: 100% 100%;
+			width: 60px;
+			height: 35px;
+			position: absolute;
+			left: 75%;
+			top: 47%;
+		}
+		.subj3 {
+			background-image: url(knif.png);
+			background-size: 100% 100%;
+			width: 80px;
+			height: 60px;
+			position: absolute;
+			left: 63%;
+			top: 74%;
+		}
+		.subj4 {
+			background-image: url(fley.png);
+			background-size: 100% 100%;
+			width: 60px;
+			height: 70px;
+			position: absolute;
+			left: 57%;
+			top: 54%;
+		}
+		.subj5 {
+			background-image: url(sapogi.png);
+			background-size: 100% 100%;
+			width: 60px;
+			height: 70px;
+			position: absolute;
+			left: 37%;
+			top: 77%;
+		}
+		.subj6 {
+			background-image: url(sunduk.png);
+			background-size: 100% 100%;
+			width: 100px;
+			height: 65px;
+			position: absolute;
+			left: 51%;
+			top: 73%;
+		}
+		.okno {
+            height: 150px; 
+            opacity: 0.8; 
+            background: #ebbc3b;
+            position: absolute;
+            top: 30%;
+            left: 33%;
+            display: none;
+		}
+		.okno2 {
+            height: 150px; 
+            opacity: 0.8; 
+            background: #ebbc3b;
+            position: absolute;
+            top: 30%;
+            left: 33%;
+            display: none;
+		}
+        .design {
+		    display: inline-block; /* Строчно-блочный элемент */
+		    padding: 7px 50px; /* Добавляем поля */
+		    text-decoration: none; /* Убираем подчёркивание у ссылки */
+		    cursor: pointer; /* Курсор в виде руки */
+		    background: #0f402c; /* Фон для браузеров, не поддерживающих градиент */
+		    font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+    <!--1 локация-->
+    <div class="first" style="padding-top: 620px;">
+        <!--предметы-->
+        <div class="subj1 sbj">
+        </div>
+        <div class="subj2 sbj">
+        </div>
+        <div class="subj3 sbj">
+        </div>
+        <div class="subj4 sbj">
+        </div>
+        <div class="subj5 sbj">
+        </div>
+        <div class="subj6 sbj">
+        </div>
+        <div class="okno col-4 mx-auto rounded-pill border border-danger pt-5">
+        	<p class="font-italic text-uppercase text-center" style="color: #4f0c15;">Молодец! Ты собрал все предметы! Нажми на кнопку "Дальше"</p>
+        </div>
+        <div class="okno2 col-4 mx-auto rounded-pill border border-danger pt-5">
+        	<p class="font-italic text-uppercase text-center" style="color: #4f0c15;">Увы! Ты не смог собрать все предметы. Перезапусти страницу и попробуй снова :)</p>
+        </div>
+    	<div class="row">
+    		<!--Список предметов-->
+	        <div class="col-6 mx-auto rounded-pill border border-danger" style="height: 80px; opacity: 0.8; background: #ebbc3b;">
+	        	<div class="row">
+	        		<div class="col-2">
+	        			<img src="human.png" class="w-75 rounded-circle">
+	        		</div>
+	        		<div class="col-10">
+	        			<p class="font-italic" style="color: #4f0c15;">Предметы Гэртона Эрншо: <span class="ochki"></span> </p>
+	        			<div class="row">
+		        			<p class="font-italic text-uppercase text" style="color: #4f0c15;">Часы</p>
+		        			<p class="font-italic ml-5 text-uppercase text" style="color: #4f0c15;">Арбалет</p>
+		        			<p class="font-italic ml-5 text-uppercase text" style="color: #4f0c15;">Нож</p>
+		        			<p class="font-italic ml-5 text-uppercase text" style="color: #4f0c15;">Флейта</p>
+		        			<p class="font-italic ml-5 text-uppercase text" style="color: #4f0c15;">Сапоги</p>
+		        			<p class="font-italic ml-5 text-uppercase text" style="color: #4f0c15;">Сундук</p>
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>
+	        <div class="col-2">
+        	    <a href="second.html" class="btn design text-warning font-italic border border-warning rounded-pill">Дальше</a>
+            </div>
+    	</div>
+    </div>
+    <script type="text/javascript">
+        let first = document.querySelector('.first');
+        let subj1 = document.querySelector('.subj1');
+        let subj2 = document.querySelector('.subj2');
+        let subj3 = document.querySelector('.subj3');
+        let subj4 = document.querySelector('.subj4');
+        let subj5 = document.querySelector('.subj5');
+        let subj6 = document.querySelector('.subj6');
+        let sbj = document.querySelectorAll('.sbj');
+        let text = document.querySelectorAll('.text');
+        let ochki = document.querySelector('.ochki');
+        let okno = document.querySelector('.okno');
+        let okno2 = document.querySelector('.okno2');
+        //очки
+        let score = 0;
+
+    	for(let i = 0; i < 6; i++) {
+    		sbj[i].onclick = function() {
+    			sbj[i].style.display = 'none';
+                text[i].style.display = 'none';
+                score = score + 1;
+                ochki.innerHTML = score;
+    		}
+    	}
+    	let firstLoc = function() {
+            if(score == 6) {
+            	okno.style.display = 'block';
+            }
+            if(score < 6) {
+            	okno2.style.display = 'block';
+            }
+    	}
+    	setTimeout(firstLoc,15000);
+    </script>
+    </body>
+</html>
